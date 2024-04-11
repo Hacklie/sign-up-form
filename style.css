@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 62.5%;
+  line-height: 1;
+  color: hsl(234, 29%, 20%);
+  background-color: hsl(235, 18%, 26%);
+  height: 100vh;
+  position: relative;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-up {
+  display: flex;
+  background-color: #fff;
+  border-radius: 2rem;
+  padding: 1.6rem;
+  gap: 1rem;
+  font-size: 1rem;
+  max-width: 58rem;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+.sign-up__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2.2rem;
+}
+.sign-up__header {
+  font-size: 3.6rem;
+  margin-bottom: 1.6rem;
+}
+.sign-up__description {
+  line-height: 1.5;
+  margin-bottom: 1.6rem;
+}
+.sign-up__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 2.6rem;
+  line-height: 1.5;
+}
+.sign-up__list-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.sign-up__mail {
+  display: flex;
+  flex-direction: column;
+}
+.sign-up__mail-labels {
+  margin-bottom: 0.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sign-up__mail-labels-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+.sign-up__mail-labels-validation-msg {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: hsl(4, 100%, 67%);
+}
+.sign-up__mail-email {
+  padding: 1.2rem;
+  border-radius: 0.5rem;
+  border: 1px solid hsl(230, 17%, 80%);
+  margin-bottom: 1.4rem;
+  font-size: 1rem;
+  position: relative;
+  cursor: pointer;
+}
+.sign-up__mail-email:focus, .sign-up__mail-email:active {
+  outline: none;
+}
+.sign-up__mail-btn {
+  background-color: hsl(234, 29%, 20%);
+  padding: 1.2rem;
+  color: #fff;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.sign-up__mail-btn:hover, .sign-up__mail-btn:focus {
+  background: #ff537c;
+  background: linear-gradient(90deg, #ff537c, #fe693f);
+  box-shadow: rgba(255, 83, 123, 0.3294117647) 0px 20px 30px;
+}
+.sign-up__img-mobile {
+  display: none;
+}
+
+.success {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 32rem;
+  background-color: #fff;
+  padding: 3.6rem;
+  border-radius: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  z-index: 10;
+}
+.success__img {
+  margin-bottom: 2.4rem;
+}
+.success__heading {
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+}
+.success__description {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 2.4rem;
+}
+.success__btn {
+  width: 100%;
+  cursor: pointer;
+  background-color: hsl(234, 29%, 20%);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1.2rem;
+}
+.success__btn:hover, .success__btn:focus {
+  background: #ff537c;
+  background: linear-gradient(90deg, #ff537c, #fe693f);
+  box-shadow: rgba(255, 83, 123, 0.3294117647) 0px 20px 30px;
+}
+
+@media (max-width: 900px) {
+  .container {
+    height: auto;
+  }
+  .sign-up {
+    flex-direction: column-reverse;
+    padding: 0;
+    border-radius: 0;
+    width: 100%;
+  }
+  .sign-up__header {
+    font-size: 2.6rem;
+  }
+  .sign-up__img {
+    display: none;
+  }
+  .sign-up__img-mobile {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .success {
+    width: 100%;
+    height: 100vh;
+    max-width: none;
+    padding: 1.5rem;
+    padding-top: 10rem;
+    border-radius: 0;
+  }
+  .success__heading {
+    font-size: 2.6rem;
+  }
+  .success__btn {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+  }
+}
+.hidden {
+  display: none;
+}/*# sourceMappingURL=style.css.map */
